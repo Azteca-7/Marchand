@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Marchand.View.Dashboard"
+            xmlns:ContentPage="clr-namespace:Marchand.View"
+            BarBackgroundColor="#808080">
+    <TabbedPage.Children>
+        <ContentPage:Cp_Nuevo  Icon="iconos3.png" >
+        </ContentPage:Cp_Nuevo>
+        <ContentPage:Cp_Mapa  Icon="iconos2.png">
+        </ContentPage:Cp_Mapa>
+        <ContentPage:Cp_Lista  Icon="iconos1.png">
+        </ContentPage:Cp_Lista>
+    </TabbedPage.Children>
+    
+   
+</TabbedPage>

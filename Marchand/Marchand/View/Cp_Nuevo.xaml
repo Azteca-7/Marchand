@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:Marchand.Render"
+             x:Class="Marchand.View.Cp_Nuevo"
+             >
+    <StackLayout Spacing="12" Padding="30,0">
+        <Label/>
+        <Label Text="Nombre" VerticalTextAlignment="Center" TextColor="#cb373e" />
+        <custom:CustomEntry x:Name="NombreEntry" WidthRequest="200" Placeholder="Papeleria Nueva"  />
+
+        <Label Text="Tipo" VerticalTextAlignment = "Center" TextColor="#cb373e"/>
+        <custom:CustomEntry x:Name="TipoEntry" WidthRequest="200" Placeholder="Lista de Tipos" />
+
+        <Label Text="Dirección" VerticalTextAlignment = "Center" TextColor="#cb373e"/>
+        <custom:CustomEntry x:Name="DereEntry" WidthRequest="200" Placeholder="Calle y Numero" />
+
+        <Label Text="Contacto" VerticalTextAlignment = "Center" TextColor="#cb373e"/>
+        <custom:CustomEntry x:Name="contacEntry" WidthRequest="200" Placeholder="Contacto"  />
+
+        <Label Text="Telefono" VerticalTextAlignment = "Center" TextColor="#cb373e"/>
+        <custom:CustomEntry x:Name="teleEntry" WidthRequest="200" Placeholder="Telefono"  />
+        
+        <Button Text="Siguiente" BackgroundColor="#cb373e" TextColor="White" Clicked="ButtonNex_Clicked"/>
+    </StackLayout>
+
+   
+    
+</ContentPage>
