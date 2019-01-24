@@ -61,6 +61,24 @@ namespace Marchand.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Habilite Su Internet.
+        /// </summary>
+        internal static string ErrorInternet {
+            get {
+                return ResourceManager.GetString("ErrorInternet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ¡Error de validación!.
+        /// </summary>
+        internal static string ErrorValidation {
+            get {
+                return ResourceManager.GetString("ErrorValidation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ¡Ocurrió Un Error!.
         /// </summary>
         internal static string MessageError {
@@ -75,6 +93,24 @@ namespace Marchand.Resource {
         internal static string Okay {
             get {
                 return ResourceManager.GetString("Okay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Correo electrónico obligatorio..
+        /// </summary>
+        internal static string RequiredEmail {
+            get {
+                return ResourceManager.GetString("RequiredEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contraseña obligatorio..
+        /// </summary>
+        internal static string RequiredPass {
+            get {
+                return ResourceManager.GetString("RequiredPass", resourceCulture);
             }
         }
     }

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Marchand.View.Cp_Mapa">
-    <StackLayout>
+    <StackLayout Spacing="12" Padding="30,0">
         <ListView x:Name="lvClientes" BackgroundColor="White"
                   HasUnevenRows="True" SeparatorColor="Blue" ItemSelected="LvClientes_ItemSelected">
             <ListView.ItemTemplate>
@@ -17,5 +17,18 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Text="Registra Visita" 
+                BackgroundColor="#cb373e"
+                />
+        <Button Text="Mensajes" 
+                BackgroundColor="#cb373e"
+                />
+        <Button Text="Encuestas" 
+                BackgroundColor="#cb373e"
+                />
+        <Button Text="No Encontrado" 
+                BackgroundColor="#cb373e"
+                />
+        <Label/>
     </StackLayout>
 </ContentPage>
