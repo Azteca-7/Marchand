@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             xmlns:custom="clr-namespace:Marchand.Render"
+             x:Class="Marchand.View.Cp_Encuesta"
+             Title="ENCUESTA">
+    <ScrollView>
+        <StackLayout Spacing="12" Padding="30,0">
+       
+        <Label/>
+        <Label Text="Antiguedad del negocio" VerticalTextAlignment="Center" TextColor="#cb373e" />
+        <custom:CustomEntry x:Name="AdnEntry" WidthRequest="200" Placeholder="3 meses"  />
+        
+        <input:RadioButton Text="Es sólo para papelería" />
+
+        <Label Text="¿Qué otro tipo tiene?" VerticalTextAlignment = "Center" TextColor="#cb373e"/>
+        <custom:CustomEntry x:Name="TipoEntry" WidthRequest="200" Placeholder="Lista de Tipos" />
+
+        <Label Text="Surte su negocio" VerticalTextAlignment = "Center" TextColor="#cb373e"/>
+        
+        <input:RadioButtonGroupView>
+            <input:RadioButton Text="Asistiendo a una tienda" />
+            <input:RadioButton Text="Pedido teléfonico" />
+            <input:RadioButton Text="Ambas" />
+            <input:RadioButton Text="Otros" />
+            <custom:CustomEntry x:Name="DereEntry" WidthRequest="200"/>
+            <input:RadioButton Text="¿Cónoce la marca SCOOL?" />
+            <input:RadioButton Text="¿Ha Comprado en Merchand?" />
+        </input:RadioButtonGroupView>
+        
+       
+
+        <Label Text="¿Qué opinión tiene de Merchand?" VerticalTextAlignment = "Center" TextColor="#cb373e"/>
+        <custom:CustomEntry x:Name="contacEntry" WidthRequest="200" Placeholder="Contacto"  />
+
+        <Button Text="Guardar" BackgroundColor="#cb373e" TextColor="White"/>
+            
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

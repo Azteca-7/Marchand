@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="Marchand.View.Cp_Lista">
+
+    <StackLayout Spacing="12" Padding="30,0">
+
+        <input:RadioButtonGroupView>
+            <input:CheckBox Text="Materiales Didacticos del Sur (calle y numero)" Type="Box" TextColor="Black" />
+            <input:CheckBox Text="Papeleria El Lapiz (Calle y Numero)" Type="Box" TextColor="Black" />
+            <input:CheckBox Text="Papeleria Panchita (Calle y Numero)" Type="Box" TextColor="Black"/>
+            <input:CheckBox Text="Papeleria Niños Heroes (Calle y Numero)" Type="Box" TextColor="Black"/>
+            
+        </input:RadioButtonGroupView>
+        <Button Text="Finalizar Jornada" BackgroundColor="#cb373e" TextColor="White"/>
+
+    </StackLayout>
+
+</ContentPage>
