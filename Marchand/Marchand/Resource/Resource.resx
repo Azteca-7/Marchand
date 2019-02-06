@@ -135,4 +135,7 @@
   <data name="RequiredPass" xml:space="preserve">
     <value>Contraseña obligatorio.</value>
   </data>
+  <data name="RequiredUser" xml:space="preserve">
+    <value>Usuario Obligatorio.</value>
+  </data>
 </root>

@@ -17,7 +17,7 @@
                    HorizontalOptions="Center" 
                    VerticalOptions="Center"/>
 
-            <Entry x:Name="Email_Entry" 
+            <Entry x:Name="User_Entry" 
                        TextColor="White" 
                        Placeholder="Usuario" 
                        HeightRequest="45" 

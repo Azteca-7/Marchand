@@ -1,4 +1,6 @@
-﻿using Marchand.View;
+﻿using Marchand.Services;
+using Marchand.Services.Configuration;
+using Marchand.View;
 using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
@@ -19,6 +21,7 @@ namespace Marchand
         private string Evalidation = Resource.Resource.ErrorValidation;
         private string REmail = Resource.Resource.RequiredEmail;
         private string Rpass = Resource.Resource.RequiredPass;
+        private string Ruser = Resource.Resource.RequiredUser;
         #endregion End Resource
         public MainPage()
         {
@@ -37,33 +40,51 @@ namespace Marchand
                 else
 
                 {
-                    if (String.IsNullOrWhiteSpace(Email_Entry.Text))
+                    if (String.IsNullOrWhiteSpace(User_Entry.Text))
                     {
-                         DisplayAlert(Evalidation, REmail, Ok);
+                         DisplayAlert(Evalidation, Ruser, Ok);
 
                     }
 
                     else
                     {
-                        //Valida que el formato del correo sea valido
-                        bool isEmail = Regex.IsMatch(Email_Entry.Text, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
-                        if (!isEmail)
-                        {
-                             DisplayAlert(Evalidation, "El formato del correo electrónico es incorrecto, revíselo e intente de nuevo.", "OK");
-
-                        }
-
+                        //Valida que el formato de usuario
                         if (String.IsNullOrWhiteSpace(Password_Entry.Text))
                         {
-                             DisplayAlert(Evalidation, Rpass, Ok);
+                             this.DisplayAlert(MError, Rpass, Ok);
+                            //return false;
                         }
+                       
 
                         else
                         {
+                            //optenemos los valores del login
+                            string user_ = User_Entry.Text;
+                            string pass_ = Password_Entry.Text;
 
-                             Navigation.PushModalAsync(new Dashboard());
-                            // await Navigation.PushAsync(new Dashboard());
+                           // var token = new ServiceActions().DoLogin("user4", "password", false);
+                            var token = new ServiceActions().DoLogin(user_, pass_, false);
+                           // DisplayAlert("Access Token", token.Access_token, "Ok");
+
+                            if (!string.IsNullOrEmpty(token.Access_token))
+                            {
+                                var jornada = new ServiceActions().GetJornada(token.Access_token);
+                                Navigation.PushModalAsync(new Dashboard());
+
+                            }
+                            else
+                            {
+                                DisplayAlert("Usuario Incorrecto", "Intente de nuevo", Ok);
+                            }
+
+
+                            //ConfigurationManager CM = new ConfigurationManager();
+                            //var accesoOk = CM.LoginMainpage(email_,pass_);
+
+                            // Navigation.PushModalAsync(new Dashboard());
+                            //// await Navigation.PushAsync(new Dashboard());
                         }
+                        
                     }
                 }
 

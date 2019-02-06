@@ -113,5 +113,14 @@ namespace Marchand.Resource {
                 return ResourceManager.GetString("RequiredPass", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuario Obligatorio..
+        /// </summary>
+        internal static string RequiredUser {
+            get {
+                return ResourceManager.GetString("RequiredUser", resourceCulture);
+            }
+        }
     }
 }
